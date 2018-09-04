@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+首页
+{% endblock title %}
+{% block css %}
+    <style>
+     .index_li{
+         margin-bottom:30px;
+         font-size: 20px;
+    }
+    .index_li a{
+        color: #0f0f0f;
+    }
+    .index_li a:hover{
+        color: orangered;
+    }
+    p{
+        margin-top: 7px;
+    }
+    </style>
+
+{% endblock css %}
+{% block content %}
+<ul>
+    {% for article in articles%}
+    <li class="index_li">
+        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+        <p style="font-size: 14px;color: slategrey;">{{ article.content|striptags |safe |truncatechars:"200" }}</p>
+
+    </li>
+        <hr>
+    {% endfor %}
+</ul>
+{% endblock content %}

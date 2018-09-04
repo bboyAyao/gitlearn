@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock title %}
+{% block css %}
+    <style>
+        .other_info{
+            color: darkgray;
+            font-size: 12px;
+        }
+    #main{
+        margin-top: 30px;
+    }
+     ol li a{
+        color: cornflowerblue;
+    }
+    </style>
+{% endblock css %}
+{% block content %}
+    <div>
+    <ol class="breadcrumb">
+        <li><a href="/">今日看点</a></li>
+        <li><a href="{{ art_col.get_absolute_url }}">{{ art_col.name }}</a></li>
+        <li class="active">正文</li>
+    </ol>
+    </div>
+    <div id="main">
+    <h2>{{ article.title }}</h2>
+        <div class="other_info">
+            <span>发表于：{{ article.pub_date }}</span>
+            <span>更新于：{{ article.update_time }}</span>
+            <span>来源：{% if not article.author %}无
+                        {% else %}{{ article.author }}
+                        {% endif %}
+            </span>
+        </div>
+        <hr>
+    <p>{{ article.content |safe}}</p>
+    </div>
+{% endblock content %}

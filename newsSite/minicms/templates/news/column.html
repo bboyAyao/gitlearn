@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ column.title }}
+{% endblock title%}
+{% block css %}
+    <style>
+     .colun_li{
+         margin-bottom:30px;
+         font-size: 18px;
+    }
+    .colun_li a{
+        color: #0f0f0f;
+    }
+    .colun_li a:hover{
+        color: orangered;
+    }
+    ol li a{
+        color: cornflowerblue;
+    }
+    p{
+        margin-top: 7px;
+    }
+    </style>
+
+{% endblock css %}
+{% block content %}
+    <div>
+    <ol class="breadcrumb">
+        <li><a href="/">今日看点</a></li>
+        <li class="active"><a href="{{ column.get_absolute_url }}">{{ column.name }}</a></li>
+    </ol>
+    </div>
+    <br>
+    <ul>
+    {% for article in col_art %}
+    <li class="colun_li">
+        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+        <p style="font-size: 14px;color: slategrey;">{{ article.content|striptags |safe |truncatechars:"200" }}</p>
+    </li>
+        <hr>
+    {% endfor %}
+    </ul>
+{% endblock content%}

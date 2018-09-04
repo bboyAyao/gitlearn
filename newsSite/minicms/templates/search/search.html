@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+搜索
+{% endblock title %}
+{% block css %}
+    <style>
+     .search_li{
+         margin-bottom:30px;
+         font-size: 18px;
+    }
+    .search_li a{
+        color: #0f0f0f;
+    }
+    .search_li a:hover{
+        color: orangered;
+    }
+    p{
+        margin-top: 7px;
+    }
+    </style>
+{% endblock css %}
+{% block content %}
+<ul>
+<li style="font-size: 16px">以下为搜索关键字 “{{ query }}” 相关新闻</li>
+    <br>
+    <br>
+    {% for item in page %}
+    <li class="search_li">
+        <a href="{{ item.object.get_absolute_url }}">{{ item.object.title }}</a>
+        <p style="font-size: 14px;color: slategrey;">{{ item.object.content|striptags |safe |truncatechars:"200" }}</p>
+    </li>
+        <hr>
+    {% empty %}
+        <p>未搜到相关新闻</p>
+        <hr>
+    {% endfor %}
+</ul>
+{% endblock content %}

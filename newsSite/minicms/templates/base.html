@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}NEWs{% endblock title %} - 今日看点</title>
+    <link href="/static/reset.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+      li a{
+          color: cornflowerblue;
+      }
+      </style>
+  {% block css %}
+
+    {% endblock css %}
+    {% block js %}
+    {% endblock js %}
+  </head>
+  <body style="padding-top: 70px">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/" style="color: red">今日看<span style="color: white;">点</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% for column in nav_display_columns %}
+            <li><a href="{{ column.get_absolute_url }}">{{ column.name }}</a></li>
+          {% endfor %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他资讯 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">资讯1</a></li>
+            <li><a href="#">资讯2</a></li>
+            <li><a href="#">资讯3</a></li>
+            <li><a href="#">资讯4</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" action="/search">
+        <div class="form-group">
+          <input type="text" class="form-control" name="q" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="row" style="width: 1000px;margin: 0 auto">
+        <div class="col-md-9">
+        {% block content %}
+        {% endblock content %}
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+        <ul>
+            <h4 style="font-size: 16px;border-left:3px solid black;padding-left: 5px">新闻栏目</h4>
+            {% for column in home_display_columns %}
+            <li style="margin-bottom: 3px"><a href="{{ column.get_absolute_url }}">{{ column.name }}</a></li>
+            {% endfor %}
+        </ul>
+            <hr>
+        <ul>
+            <li style="font-size: 16px;margin-bottom: 6px;border-left:3px solid black;padding-left: 5px">最新时讯</li>
+            {% for article in new_articles%}
+            <li style="margin-bottom: 3px;list-style-type: disc;margin-left: 13px">
+                <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+            <hr>
+        <ul>
+            <li style="font-size: 16px;border-left:3px solid black;padding-left: 5px;margin-bottom: 6px;">最近浏览</li>
+            {% for new in news_history_lsit %}
+                <li style="margin-bottom: 3px;list-style-type: disc;margin-left: 13px">
+                    <a href="{{ new.get_absolute_url }}">{{ new.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
