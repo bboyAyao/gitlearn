@@ -11,4 +11,6 @@
 
 该网页有浏览记录功能和搜索功能，浏览功能由后端设置cookie拼接字符实现。  
 搜索用whoosh引擎加上python jieba分词库实现  
-通过model设置对应字段迁移至数据库生成对应表
+通过model设置对应字段迁移至数据库生成对应表  
+
+其他django笔记  https://www.jianshu.com/nb/26746209
