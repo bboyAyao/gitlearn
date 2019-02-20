@@ -17,9 +17,10 @@
   
 <hr>
 
-技能状况：
+### 技能状况：
 
 - 熟悉python,html,css,javascript
 - 了解jquery,vue,webpack
 - 了解mysql,redis
 - 了解linux
+- 了解数据结构
