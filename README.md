@@ -12,8 +12,8 @@
 ### 项目练习
 
 
-- [微信小程序](https://github.com/bboyAyao/gitlearn/tree/master/wechat_demo)  
-- [移动端vue](https://github.com/bboyAyao/vue-qunar-travel)  
+- [热点信息与电影(微信小程序)](https://github.com/bboyAyao/gitlearn/tree/master/wechat_demo)  
+- [移动端旅行(vue)](https://github.com/bboyAyao/vue-qunar-travel)  
 - [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)     
   
 <hr>
