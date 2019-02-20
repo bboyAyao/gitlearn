@@ -14,7 +14,7 @@
 
 - [微信小程序](https://github.com/bboyAyao/gitlearn/tree/master/wechat_demo)  
 - [移动端vue](https://github.com/bboyAyao/vue-qunar-travel)  
-- [简易网易新闻](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)     
+- [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)     
   
 <hr>
 
