@@ -22,7 +22,7 @@
 
 - 熟悉python,html,css,javascript
 - 了解jquery,vue,webpack
-- 了解mysql,redis，mogoDB
+- 了解mysql,redis,mogoDB
 - 了解linux
 - 了解数据结构
 
@@ -35,4 +35,4 @@
 <hr/>
 
 ### 其他兴趣
-街舞
+街舞,ACG
