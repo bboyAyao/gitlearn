@@ -18,7 +18,7 @@
   
 <hr>
 
-### 技能状况：
+### 技能状况
 
 - 熟悉python,html,css,javascript
 - 了解jquery,vue,webpack
