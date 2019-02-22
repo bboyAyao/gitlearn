@@ -14,7 +14,7 @@
 
 - [热点信息与电影(微信小程序)](https://github.com/bboyAyao/gitlearn/tree/master/wechat_demo)  
 - [移动端旅行(vue)](https://github.com/bboyAyao/vue-qunar-travel)  
-- [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)     
+- [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)  
   
 <hr>
 
@@ -31,6 +31,12 @@
 ### 个人情况
 跨专业考研计算机未成功，因兴趣开始自学python，后发现对前端有较大兴趣，决定转换方向走前端，机会大一些。  
 无相关工作经验。
+
+<hr/>
+
+### 相关笔记
+- [其他python笔记](https://www.jianshu.com/p/77823140d532)  
+- 前端笔记都已转移到有道云
 
 <hr/>
 
