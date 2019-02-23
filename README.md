@@ -35,7 +35,7 @@
 <hr/>
 
 ### 相关笔记
-- [其他python笔记](https://www.jianshu.com/p/77823140d532)  
+- [其他python笔记](https://www.jianshu.com/u/70edc617c7ce) 
 - 前端笔记都已转移到有道云
 
 <hr/>
