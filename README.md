@@ -14,6 +14,7 @@
 - [热点信息与电影(微信小程序)](https://github.com/bboyAyao/gitlearn/tree/master/wechat_demo)  
 - [移动端旅行(vue)](https://github.com/bboyAyao/vue-qunar-travel)  
 - [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)  
+- [网页音乐播放器(js+jq)](https://github.com/bboyAyao/playermusic)
   
 <hr>
 
