@@ -15,6 +15,7 @@
 - [移动端旅行(vue)](https://github.com/bboyAyao/vue-qunar-travel)  
 - [简易网易新闻(python-django)](https://github.com/bboyAyao/gitlearn/tree/master/newsSite/minicms)  
 - [网页音乐播放器(js+jq)](https://github.com/bboyAyao/playermusic)
+- 写过一些游戏代码的逻辑，2048合并消除游戏，和flappybird游戏
   
 <hr>
 
